@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<!-- Meta balises -->
+	<!-- Le site peut gérer les accents -->
+	<meta charset="UTF-8">
+	<!-- Description net du site -->
+	<meta name="description" content="Je m'appelle Jordan Lapointe, j'étudie en multimédia et je suis un intégrateur Web.">
+	<!-- Mots clés de codes utilisés dans le site -->
+  	<meta name="keywords" content="Jordan Lapointe,Intégrateur Web,Multimédia,Loto-Québec">
+  	<!-- Nom de l'auteur du site -->
+  	<meta name="author" content="Jordan Lapointe">
+  	<!-- Ajustement par défaut du navigateur -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Titre de la page -->
+	<title>Jordan Lapointe &mdash; Intégrateur Web</title>
+
+	<!-- Importations et références -->
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lekton|Montserrat&display=swap" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel="icon" href="images/Logo.ico">
+
+	<!-- Fichiers CSS -->
+	<!-- Initialisation par défaut -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Fichier CSS du site -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<!-- Contenu -->
+<body id="DebutSite">
+	<div class="global">
+
+		<!-- Haut de page -->
+		<header>
+			<!-- Première partie du haut de page -->
+			<div class="HeaderHaut">
+				<img src="images/Logo.png" alt="Logo de Jordan Lapointe">
+				<img src="images/LogoNoir.png" alt="Logo de Jordan Lapointe">
+				<h1>Jordan<br>Lapointe</h1>
+			</div>
+			<!-- Deuxième partie du haut de page -->
+			<div class="HeaderBas">
+				<h2 id="texte"></h2>
+
+				<!-- JavaScript pour l'animation du texte « Intégrateur Web » (s'exécute juste après qu'il aille reconnu la balise h2) -->
+				<script>
+					var chaine = "Intégrateur Web";
+					var texte = chaine.split("");
+					var element = document.getElementById('texte');
+
+					(function TexteAnime() {
+					var resolutionEcran = window.matchMedia("(min-width: 1025px)");
+
+					if(resolutionEcran.matches) {
+						texte.length > 0 ? element.innerHTML += texte.shift() : clearTimeout(animationEnCours); 
+						var animationEnCours = setTimeout(TexteAnime, 180);
+					}
+					else {
+						for (var i = 0; i < texte.length * 2; i++) {
+							element.innerHTML = chaine;
+						}
+					}
+					})();
+				</script>
+
+				<!-- Flèche pour aller à la section de « Mes réalisations » -->
+				<a href="#Realisations">
+					<img src="images/FlecheBlanche.png" alt="Aller à la prochaine section.">
+				</a>
+			</div>
+		</header>
+
+		<!-- Contenu principal -->
+		<main>
+			<!-- Mes réalisations -->
+			<div class="Realisations" id="Realisations">
+				<h2><span>&#60;</span>Mes réalisations<span>&#62;</span></h2>
+				<div class="Oeuvres OeuvresSection1">
+					<!-- Refonte du site web de la Maison de jeunes de Saint-Léonard -->
+					<div>
+						<iframe src="https://www.youtube.com/embed/uH0GDrp1F7A" allowfullscreen="allowfullscreen" title="Maison de jeunes de Saint-Léonard"></iframe>
+						<p><a href="https://www.youtube.com/embed/uH0GDrp1F7A" target="_blank">Refonte du site Web de la Maison de jeunes de Saint&#8209;Léonard</a></p>
+					</div>
+					<!-- Promotion Futuristik -->
+					<div>
+						<iframe src="https://www.youtube.com/embed/YYPWbo2obWg" allowfullscreen="allowfullscreen" title="Promotion Futuristik"></iframe>
+						<p><a href="https://www.youtube.com/embed/YYPWbo2obWg" target="_blank">Promotion Futuristik</a></p>
+					</div>
+					<!-- Promotion du Grand Prix de Trois-Rivières -->
+					<div>
+						<iframe src="https://www.youtube.com/embed/3XvKp61qSW8" allowfullscreen="allowfullscreen" title="Promotion Grand Prix de Trois-Rivières"></iframe>
+						<p><a href="https://www.youtube.com/embed/3XvKp61qSW8" target="_blank">Promotion du Grand Prix de Trois&#8209;Rivières</a></p>
+					</div>
+				</div>
+				<div class="Oeuvres">
+					<!-- Provinces du Canada -->
+					<div>
+						<iframe src="https://www.youtube.com/embed/jPq6KJo9HAU" allowfullscreen="allowfullscreen" title="Provinces du Canada"></iframe>
+						<p><a href="https://www.youtube.com/embed/jPq6KJo9HAU" target="_blank">Les provinces du Canada</a></p>
+					</div>
+					<!-- Animations d'Halloween -->
+					<div>
+						<iframe src="https://www.youtube.com/embed/RHdQ0s-v57Y" allowfullscreen="allowfullscreen" title="Animations d'Halloween"></iframe>
+						<p><a href="https://www.youtube.com/embed/RHdQ0s-v57Y" target="_blank">Animations d'Halloween</a></p>
+					</div>
+					<!-- Refonte du site web de la Fruiterie 440 -->
+					<div>
+						<iframe src="https://www.youtube.com/embed/oGTqREH0YYs" allowfullscreen="allowfullscreen" title="Refonte du site web de la Fruiterie 440"></iframe>
+						<p><a href="https://www.youtube.com/embed/oGTqREH0YYs" target="_blank">Refonte du site web de la Fruiterie&nbsp;440</a></p>
+					</div>
+				</div>
+
+				<!-- Flèche pour aller à la section de « Qui suis-je ? » -->
+				<a href="#QuiSuisJe">
+					<img src="images/FlecheNoire.png" alt="Aller à la prochaine section.">
+				</a>
+			</div>
+
+			<!-- Qui suis-je ? -->
+			<div class="QuiSuisJe" id="QuiSuisJe">
+				<h2><span>&#60;</span>Qui suis-je<span class="Interrogation">?</span><span>&#62;</span></h2>
+
+				<!-- Caractéristiques personelles -->
+				<h3 id="CarPer"><a href="#CarPer">Caractéristiques personnelles</a></h3>
+				<p content="Je m'appelle Jordan Lapointe, je suis un intégrateur Web HTML/CSS et je suis un étudiant en multimédia.">Je me nomme Jordan Lapointe et je me décris comme étant une personne très minutieuse, créative, patiente, assidue, organisée, perfectionniste et ayant un bon esprit d’équipe. Je possède des connaissances variées en multimédia tant sur Windows, MacOS, Android ou iOS. Mes principaux langages de programmation et environnements de développement sont : HTML5, CSS, SCSS, SASS, JavaScript, Unity, CRUD et CSharp. Je maîtrise également très bien la Suite Adobe et la Suite&nbsp;Office.</p>
+
+				<!-- Expériences de travail scolaires et professionnelles -->
+				<h3 id="ExpTra"><a href="#ExpTra">Expériences de travail&nbsp;scolaires et&nbsp;professionnelles</a></h3>
+				<p content="J'ai déjà travaillé pour Loto-Québec et pour le ministère de l'Immigration.">Mon intérêt pour le multimédia a commencé lorsque j’étais en secondaire IV à l'Académie Dunton, en 2015, où j’ai créé un jeu vidéo en équipe avec l'aide de deux stagiaires d’Ubisoft dans le cadre d’un projet pilote. Ça m'a donné le goût d’aller étudier dans le DEC Techniques d’intégration multimédia au Collège de Maisonneuve. Ensuite, j’ai vécu ma première expérience de travail à l’été 2017 à la Société des casinos du Québec en tant que stagiaire au Service environnement multimédia, j’y ai créé une introduction d'une vidéo YouTube ainsi qu’un univers magique en réalité virtuelle. L’été suivant, j'ai travaillé pour le ministère de l’Immigration, de la Diversité et de l’Inclusion en tant que stagiaire intégrateur Web. À l'été 2019, j'ai fait un autre stage à Loto-Québec, mais cette fois-ci en intégration Web, où j'ai principalement mis en ligne divers contenus, tels que des gagnants, des jeux et des annonces de gros lots ou de concours, créer des vidéos et pris des captures de jeux de machines à sous pour en faire la promotion, coder des pages Web en HTML/CSS et intégrer du texte sur le site <a href="https://www.lotoquebec.com" target="_blank">Lotoquebec.com</a> qui reçoit plus de 3 millions de visites mensuellement. D’ailleurs, j'y retournerai en tant que stagiaire à l'été&nbsp;2020.</p>
+
+				<!-- Perspectives professionnelles -->
+				<h3 id="PerPro"><a href="#PerPro">Perspectives professionnelles</a></h3>
+				<p content="Je prévois étudier en design de jeux vidéo à l'UQAT, mais j'aimerais continuer de travailler dans le domaine de l'intégration Web.">Je prévois travailler dans l’intégration Web plus tard. Puisqu'aucun programme universitaire n'existe dans ce domaine, que j'ai déjà les compétences acquises pour ce métier et que j'ai l'opportunité d'aller à l'université grâce à l'aide de ma famille, je prévois exploiter temporairement, pendant 3 ans, ma deuxième passion qui est le design de jeux vidéo dans un BAC à l’UQAT à&nbsp;Montréal.</p>
+			</div>
+		</main>
+
+		<!-- Pied de page -->
+		<footer>
+			<div class="Footer">
+
+				<!-- Mon CV -->
+				<div class="FooterCV">
+					<a href="medias/CV_JordanLapointe.pdf" target="_blank" download>Télécharger mon&nbsp;CV</a>
+				</div>
+
+				<!-- Informations pour me contacter -->
+				<div class="FooterConteneurInfos">
+					<div class="FooterInfos">
+						<p>©&nbsp;<a href="https://www.artstation.com/jordan_lapointe" target="_blank">Jordan&nbsp;Lapointe</a>,&nbsp;2020</p>
+						<p><a href="mailto:jordan.lapointe87@gmail.com" target="_blank">jordan.lapointe87@gmail.com</a></p>
+					</div>
+					<div class="FooterFleche">
+						<a href="#DebutSite">
+							<img src="images/FlecheBlanche.png" alt="Revenir au début du site.">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Animations présentes dans le pied de page -->
+			<!-- Animation de la balise <p></p> -->
+			<div class="AnimationFooterP">
+				<p>&#60;p&#62;</p>
+				<p>&#60;/p&#62;</p>
+			</div>
+			<!-- Animation .class -->
+			<div class="AnimationFooterClass">
+				<p>.</p>
+				<p>c</p>
+				<p>l</p>
+				<p>a</p>
+				<p>s</p>
+				<p>s</p>
+			</div>
+		</footer>
+	</div>
+	<!-- Fichier JavaScript nécessaire pour le fonctionnement du déroulement fluide lors du clic sur les flèches -->
+	<script src="js/scroll.js"></script>
+</body>
+</html>

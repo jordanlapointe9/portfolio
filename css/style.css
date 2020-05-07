@@ -1,0 +1,1009 @@
+/* 
+@author: Jordan Lapointe
+@title: Fichier CSS du site
+
+Polices :
+- Titres : 'Montserrat', sans-serif
+- Contenu : 'Lekton', sans-serif
+
+Couleurs :
+- Blanc : #fff
+- Gris foncé : #111111
+- Bleu : #004990
+*/
+
+
+
+/* ==================== Version Bureau ==================== */
+/* Général */
+body {
+	background-color: #111111;
+}
+
+img {
+	width: 100%;
+	user-select: none;
+}
+
+::selection {
+  color: #fff;
+  background: #004990;
+}
+
+/* Animations */
+/* Flèches */
+@keyframes AnimationFleche {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.5;
+	}
+}
+
+.global {
+	margin: 0 auto;
+	height: auto;
+	background-color: #111111;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+/* Haut de page */
+/* Section du haut */
+.HeaderHaut {
+	background-color: #fff;
+	background-image: url("../images/MotifNoirBureau.png");
+    background-size: 99% 100%;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes AnimationHaut {
+	from {
+		filter:invert(0%) contrast(100%) brightness(100%);
+	}
+	to {
+		filter:invert(100%) contrast(200%) brightness(200%);
+	}
+}
+
+@keyframes AnimationBas {
+	from {
+		filter:invert(0%) contrast(100%) brightness(100%);
+	}
+	to {
+		filter:invert(100%) contrast(200%) brightness(200%);
+	}
+}
+
+@keyframes AnimationPasHover {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+div.HeaderHaut:hover {
+	animation: AnimationHaut 0.5s linear forwards;
+}
+
+div.HeaderHaut:not(:hover), div.HeaderHaut:not(:hover) ~ div.HeaderBas:hover {
+	animation: AnimationPasHover 0.5s linear forwards;
+}
+
+div.HeaderHaut:hover > img:first-child {
+	display: none;
+}
+
+div.HeaderHaut:hover > img:nth-child(2) {
+	filter:invert(100%);
+}
+
+div.HeaderHaut:not(:hover) > img:nth-child(2) {
+	display: none;
+}
+
+div.HeaderHaut:hover > h1 {
+	filter:brightness(0%);
+}
+
+div.HeaderHaut:hover ~ div.HeaderBas {
+	animation: AnimationBas 0.5s linear forwards;
+}
+
+.HeaderHaut img {
+	width: 325px;
+	height: 325px;
+	align-self: center;
+}
+
+.HeaderHaut h1 {
+	font-family: 'Montserrat', sans-serif;
+	color: #004990;
+	font-size: 8.75vw;
+	padding-left: 3vw;
+	margin: 0;
+	text-align: center;
+}
+
+/* Section du bas */
+.HeaderBas {
+	background-color: #111111;
+	background-image: url("../images/MotifBlancBureau.png");
+    background-size: 99% 100%;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderBas h2 {
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	font-size: 7.5vw;
+	align-self: center;
+	margin-top: 7.5vh;
+	margin-bottom: 15vh;
+}
+
+.HeaderBas a {
+	align-self: center;
+	text-align: center;
+}
+
+.HeaderBas img {
+	width: 75%;
+	margin-top: -50%;
+}
+
+.HeaderBas img:hover {
+	animation: AnimationFleche 0.5s ease-in-out forwards;
+}
+
+/* Contenu principal */
+/* Mes réalisations */
+.Realisations {
+	background-color: #fff;
+	height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.Realisations h2 {
+	font-family: 'Montserrat', sans-serif;
+	color: #004990;
+	align-self: center;
+	font-size: 2.5vw;
+	margin-bottom: 1em;
+}
+
+span {
+	color: #111111;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.Oeuvres {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.Oeuvres div {
+	width: 33%;
+	margin: 0 auto;
+}
+
+.OeuvresSection1 {
+	margin-bottom: 5vh;
+}
+
+.Oeuvres iframe {
+	width: 25vw;
+	height: 25vh;
+}
+
+.Oeuvres iframe {
+	align-self: center;
+	margin-left: 10%;
+}
+
+.Oeuvres p {
+	font-family: 'Lekton', sans-serif;
+	color: #111111;
+	font-size: 1.25em;
+	text-align: center;
+	align-self: center;
+	flex-wrap: wrap;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.Oeuvres a {
+	color: #111;
+}
+
+.Realisations a {
+	align-self: center;
+	text-align: center;
+	padding-top: 6.5vh;
+}
+
+.Realisations img {
+	width: 75%;
+}
+
+.Realisations img:hover {
+	animation: AnimationFleche 0.5s ease-in-out forwards;
+}
+
+/* Qui suis-je ? */
+.QuiSuisJe {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.QuiSuisJe h2 {
+	font-family: 'Montserrat', sans-serif;
+	color: #004990;
+	align-self: center;
+	font-size: 2.5vw;
+	margin-bottom: 1em;
+}
+
+@keyframes AnimationInterrogation {
+	from {
+		transform: scale(1) rotate(0deg);
+	}
+	25% {
+		transform: scale(1.25) rotate(15deg);
+	}
+	50% {
+		transform: scale(1.5) rotate(0deg);
+	}
+	75% {
+		transform: scale(1.25) rotate(-15deg);
+	}
+	to {
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+div.QuiSuisJe h2 span.Interrogation {
+	display: inline-block;
+	color: #004990;
+	animation: AnimationInterrogation 4s ease-in-out 2s infinite alternate;
+}
+
+.QuiSuisJe h3 {
+	font-family: 'Montserrat', sans-serif;
+	color: #004990;
+	font-size: 1.25em;
+	margin-bottom: 0px;
+	text-align: center;
+	margin-top: 0%;
+	border-bottom: 0.1em solid #111111;
+}
+
+.QuiSuisJe h3 a {
+	text-decoration: none;
+	color: #004990;
+}
+
+.QuiSuisJe p {
+	width: 75%;
+	font-family: 'Lekton', sans-serif;
+	font-size: 1.15em;
+	text-align: justify;
+	font-weight: bold;
+	margin-bottom: 2em;
+	max-width: 1000px;
+	line-height: 1.5;
+}
+
+.QuiSuisJe h3:nth-child(2):hover,
+.QuiSuisJe h3:nth-child(4):hover,
+.QuiSuisJe h3:nth-child(6):hover {
+	cursor: pointer;
+}
+
+.QuiSuisJe h3:nth-child(2):hover ~ p:nth-child(3), 
+.QuiSuisJe h3:nth-child(4):hover ~ p:nth-child(5), 
+.QuiSuisJe h3:nth-child(6):hover ~ p:nth-child(7) {
+	color: #004990;
+} 
+
+.QuiSuisJe p:nth-child(3):hover,
+.QuiSuisJe p:nth-child(5):hover,
+.QuiSuisJe p:nth-child(7):hover {
+	color: #004990;
+}
+
+.QuiSuisJe p:first-letter {
+	margin-left: 4vw;
+}
+
+.QuiSuisJe a {
+	text-decoration: underline;
+	color: #111111;
+	font-weight: bold;
+}
+
+.QuiSuisJe a:hover {
+	color: #004990;
+}
+
+/* Pied de page */
+footer {
+	background-color: #111111;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+}
+
+div.Footer {
+	display: flex;
+	flex-direction: column;
+}
+
+.FooterCV {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+}
+
+div.FooterCV {
+	background-color: #fff;
+	width: 40vw;
+	height: 10vh;
+}
+
+.FooterCV a {
+	width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+	color: #004990;
+	font-family: 'Lekton', sans-serif;
+	font-size: 2.5vw;
+	font-weight: bold;
+}
+
+.FooterCV a:hover {
+	background-color: #004990;
+	color: #fff;
+}
+
+.FooterCV a:active {
+	background-color: #2f2f2f;
+}
+
+div.FooterInfos {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
+	margin: 0 auto;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.FooterFleche a {
+	align-self: center;
+}
+
+.FooterFleche {
+	text-align: center;
+}
+
+.Footer img {
+	width: 75%;
+	transform: rotate(180deg);
+}
+
+.Footer img:hover {
+	animation: AnimationFleche 0.5s ease-in-out forwards;
+}
+
+.Footer p {
+	color: #fff;
+	font-family: 'Lekton', sans-serif;
+	font-weight: bold;
+	font-size: 1.25em;
+	padding: 2%;
+}
+
+.FooterInfos a {
+	text-decoration: none;
+	color: #fff;
+	text-decoration: underline;
+}
+
+.FooterInfos a:hover {
+	color: #004990;
+}
+
+.FooterConteneurInfos {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.5vh;
+}
+
+.AnimationFooterP {
+	position: absolute;
+	width: auto;
+	height: auto;
+	left: 5%;
+	top: 40%;
+}
+
+.AnimationFooterClass {
+	position: absolute;
+	width: auto;
+	height: auto;
+	right: 12.5%;
+	top: 20%;
+}
+
+/* Animation du <p></p> à gauche du footer */
+@keyframes AnimationFooterPPremierP {
+	from {
+		margin-left: 0vw;
+		letter-spacing: 0vw;
+		transform: rotateY(0deg);
+	}
+	10% {
+		margin-left: 0vw;
+		letter-spacing: 0vw;
+		transform: rotateY(0deg);
+	}
+	60% {
+		letter-spacing: 0.5vw;
+	}
+	65% {
+		margin-left: 11vw;
+		letter-spacing: 0vw;
+		transform: rotateY(0deg);
+	}
+	85% {
+		margin-left: -0.5vw;
+		transform: rotateY(360deg);
+	}
+	98.5% {
+		margin-left: 0vw;
+	}
+	to {
+		margin-left: 0vw;
+		transform: rotateY(360deg);
+	}
+}
+
+
+@keyframes AnimationFooterPDeuxiemeP {
+	from {
+		margin-left: 0vw;
+		transform: rotateY(0deg);
+		letter-spacing: 0vw;
+	}
+
+	10% {
+		margin-left: 0vw;
+		transform: rotateY(0deg);
+		letter-spacing: 0vw;
+	}
+	50% {
+		margin-left: 1vw;
+		letter-spacing: 0.15vw;
+	}
+	60% {
+		margin-left: -0.35vw;
+		transform: rotateY(0deg);
+		letter-spacing: 0vw;
+	}
+	85% {
+		margin-left: -0.35vw;
+		transform: rotateY(0deg);
+		letter-spacing: 0vw;
+	}
+	to {
+		margin-left: 0vw;
+		transform: rotateY(360deg);
+	}
+}
+
+/* Animation du .class à droite du footer */
+@keyframes AnimationFooterClassPremierP {
+	from {
+		transform: translateY(0vh);
+	}
+	25% {
+		transform: translateY(10vh);
+	}
+	50% {
+		transform: translateY(10vh);
+	}
+	75% {
+		transform: translateY(0vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+@keyframes AnimationFooterClassDeuxiemeP {
+	from {
+		transform: translateY(0vh);
+	}
+	30% {
+		transform: translateY(10vh);
+	}
+	50% {
+		transform: translateY(10vh);
+	}
+	80% {
+		transform: translateY(0vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+@keyframes AnimationFooterClassTroisiemeP {
+	from {
+		transform: translateY(0vh);
+	}
+	35% {
+		transform: translateY(10vh);
+	}
+	50% {
+		transform: translateY(10vh);
+	}
+	85% {
+		transform: translateY(0vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+@keyframes AnimationFooterClassQuatriemeP {
+	from {
+		transform: translateY(0vh);
+	}
+	40% {
+		transform: translateY(10vh);
+	}
+	50% {
+		transform: translateY(10vh);
+	}
+	90% {
+		transform: translateY(0vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+@keyframes AnimationFooterClassCinquiemeP {
+	from {
+		transform: translateY(0vh);
+	}
+	45% {
+		transform: translateY(10vh);
+	}
+	50% {
+		transform: translateY(10vh);
+	}
+	95% {
+		transform: translateY(0vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+@keyframes AnimationFooterClassSixiemeP {
+	from {
+		transform: translateY(0vh);
+	}
+	50% {
+		transform: translateY(10vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+.AnimationFooterP p, .AnimationFooterClass p {
+	display: inline-block;
+	font-family: 'Lekton', sans-serif;
+	font-size: 1.5vw;
+	color: #fff;
+	font-weight: bold;
+	margin: 0;
+}
+
+.AnimationFooterP p:first-child {
+	animation: AnimationFooterPPremierP 6s ease-in infinite;
+}
+
+.AnimationFooterP p:nth-child(2) {
+	animation: AnimationFooterPDeuxiemeP 6s ease-in infinite;
+}
+
+.AnimationFooterClass p:first-child {
+	animation: AnimationFooterClassPremierP 12s ease-in-out infinite;
+}
+
+.AnimationFooterClass p:nth-child(2) {
+	animation: AnimationFooterClassDeuxiemeP 12s ease-in-out infinite;
+}
+
+.AnimationFooterClass p:nth-child(3) {
+	animation: AnimationFooterClassTroisiemeP 12s ease-in-out infinite;
+}
+
+.AnimationFooterClass p:nth-child(4) {
+	animation: AnimationFooterClassQuatriemeP 12s ease-in-out infinite;
+}
+
+.AnimationFooterClass p:nth-child(5) {
+	animation: AnimationFooterClassCinquiemeP 12s ease-in-out infinite;
+}
+
+.AnimationFooterClass p:nth-child(6) {
+	animation: AnimationFooterClassSixiemeP 12s ease-in-out infinite;
+}
+
+/* Medias Queries */
+/* ==================== 1300 px et moins ==================== */
+@media screen and (max-width: 1300px) {
+	.Realisations h2, .QuiSuisJe h2 {
+		font-size: 3vw;
+	}
+
+	.QuiSuisJe h3 {
+		font-size: 1.75vw;
+	}
+
+	.Oeuvres p {
+		font-size: 1em;
+	}
+
+	.AnimationFooterP, .AnimationFooterClass {
+		display: none;
+	}
+}
+
+/* ==================== Version Tablette ==================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.HeaderHaut {
+		background-image: url("../images/MotifNoirMobile.png");
+		flex-direction: column;
+		background-size: 99% 101%;
+	}
+
+	.HeaderHaut h1 {
+		padding-top: 0;
+		padding-left: 0;
+		font-size: 3.75em;
+	}
+
+	.HeaderBas {
+		background-image: url("../images/MotifBlancMobile.png");
+	}
+
+	.HeaderHaut img {
+		width: 225px;
+		height: 225px;
+	}
+
+	.HeaderBas  img {
+		width: 100%;
+	}
+
+	.HeaderBas img:hover {
+		animation: none;
+	}
+
+	.HeaderBas h2 {
+		font-size: 13vw;
+		text-align: left;
+		margin-bottom: 5vh;
+		padding-left: 3.5vw;
+	}
+
+	.Realisations {
+		height: auto;
+	}
+
+	.Realisations a {
+		padding-top: 0;
+		padding-bottom: 3.5vh;
+	}
+
+	.Realisations h2 {
+		font-size: 4vw;
+		margin-bottom: 1em;
+	}
+
+	.Realisations img:hover {
+		animation: none;
+	}
+
+	.QuiSuisJe h3 {
+		font-size: 1em;
+		font-family: 'Montserrat', sans-serif;
+		color: #004990;
+		border-bottom: 0.1em solid #111111;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+
+	.Oeuvres {
+		flex-direction: column;
+		align-self: center;
+	}
+
+	.Oeuvres div {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5em;
+	}
+
+	.Oeuvres iframe {
+		margin-left: 0%;
+		height: 300px;
+		width: 600px;
+	}
+
+	.Oeuvres p {
+		font-size: 1.25em;
+	}
+
+	.OeuvresSection1 {
+		margin-bottom: 0px;
+	}
+
+	.QuiSuisJe {
+		padding-bottom: 5vh;
+	}
+
+	.QuiSuisJe h2 {
+		font-size: 4vw;
+		margin-bottom: 1em;
+	}
+
+	.QuiSuisJe h3 {
+		border-bottom: 0px;
+		text-decoration: underline;
+		font-size: 1.25em;
+	}
+
+	.QuiSuisJe p {
+		width: 85%;
+		margin-bottom: 3em;
+	}
+
+	.QuiSuisJe p:last-child {
+		margin-bottom: 0em;
+	}
+
+	div.FooterCV {
+		height: 7.75vh;
+	}
+
+	.FooterCV a {
+		font-size: 4vw;
+		text-align: center;
+		line-height: 1em;
+	}
+
+	.FooterConteneurInfos {
+		margin-top: 0px;
+	}
+
+	div.FooterInfos {
+		flex-direction: column-reverse;
+		align-items: center;
+		margin-bottom: 1.5vh;
+		margin-top: 1.5vh;
+	}
+
+	.Footer p {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+
+	.Footer p:nth-child(2) {
+		margin-bottom: 0px;
+		margin-top: 1em;
+	}
+
+	.Footer img:hover {
+		animation: none;
+	}
+}
+
+/* ==================== Version Mobile ==================== */
+@media screen and (max-width: 767px) {
+	.HeaderHaut {
+		background-image: url("../images/MotifNoirMobile.png");
+		flex-direction: column;
+	}
+
+	.HeaderBas {
+		background-image: url("../images/MotifBlancMobile.png");
+		justify-content: center;
+	}
+
+	.HeaderHaut img {
+		width: 175px;
+		height: 175px;
+		padding-left: 5vw;
+		background-size: 99% 101%;
+	}
+
+	.HeaderHaut h1 {
+		font-size: 3.25em;
+		padding-left: 5vw;
+		padding-top: 2.5vh;
+	}
+
+	.HeaderBas h2 {
+		font-size: 13vw;
+		text-align: left;
+		margin-bottom: 10vh;
+		padding-left: 5vw;
+	}
+
+	.HeaderBas img:hover {
+		animation: none;
+	}
+
+	.Realisations {
+		height: auto;
+	}
+
+	.Realisations a {
+		padding-top: 0;
+		padding-bottom: 3.5vh;
+	}
+
+	.Realisations h2 {
+		font-size: 6vw;
+		margin-bottom: 2em;
+	}
+
+	.Realisations img:hover {
+		animation: none;
+	}
+
+	.QuiSuisJe h3 {
+		font-size: 1.5em;
+		font-family: 'Montserrat', sans-serif;
+		color: #004990;
+		border-bottom: 0.1em solid #111111;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+
+	.Oeuvres {
+		flex-direction: column;
+		align-self: center;
+	}
+
+	.Oeuvres p {
+		margin-bottom: 4em;
+		font-size: 3.5vw;
+		width: 110%;
+	}
+
+	.Oeuvres div {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.Oeuvres iframe {
+		margin-left: 0%;
+		height: 30vh;
+		width: 85vw;
+	}
+
+	.OeuvresSection1 {
+		margin-bottom: 0px;
+	}
+
+	.QuiSuisJe {
+		padding-bottom: 5vh;
+	}
+
+	.QuiSuisJe p {
+		margin-bottom: 1em;
+	}
+
+	.QuiSuisJe h2 {
+		font-size: 6vw;
+		margin-bottom: 2em;
+	}
+
+	.QuiSuisJe h3 {
+		border-bottom: 0px;
+		text-decoration: underline;
+		font-size: 1.25em;
+	}
+
+	.QuiSuisJe p {
+		width: 85%;
+		text-align: center;
+		line-height: 1.25;
+		margin-bottom: 7.5vh;
+	}
+
+	.QuiSuisJe p:last-child {
+		margin-bottom: 0;
+	}
+
+	footer {
+		margin-bottom: 3vh;
+	}
+
+	div.FooterCV {
+		height: 7.5vh;
+		width: 30vh;
+	}
+
+	.FooterCV a {
+		font-size: 150%;
+		text-align: center;
+		line-height: 1em;
+	}
+
+	.FooterConteneurInfos {
+		flex-direction: column;
+		margin-top: 2.25vh;
+	}
+
+	div.FooterInfos {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.Footer p {
+		margin-top: 0px;
+		padding-top: 0px;
+		font-size: 1em;
+	}
+
+	.Footer p:nth-child(2) {
+		margin-bottom: 0px;
+	}
+
+	.Footer img:hover {
+		animation: none;
+	}
+}
